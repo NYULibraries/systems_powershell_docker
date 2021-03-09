@@ -1,6 +1,6 @@
 docker-defaults: &docker-defaults
   docker:
-    - image: nyulibraries/circleci_docker:19.03.13-dc-1.27.4-1-pre
+    - image: quay.io/nyulibraries/circleci_docker:19.03.13-dc-1.27.4-0
       environment:
         - IMAGE_NAME=systems_powershell
   working_directory: ~/app
