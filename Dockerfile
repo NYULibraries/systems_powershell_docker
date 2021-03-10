@@ -2,3 +2,5 @@
 FROM mcr.microsoft.com/powershell:centos-7
 
 COPY illiad.iis.reset.ps1 .
+
+CMD [ "./illiad.iis.reset.ps1" ]
