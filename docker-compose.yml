@@ -3,6 +3,6 @@ services:
   powershell:
     build: .
     environment:
-      - POWERSHELL_CRED
+      - POWERSHELL_USER
       - POWERSHELL_PW
       - SERVER_NAME
