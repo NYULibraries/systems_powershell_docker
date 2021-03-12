@@ -1,0 +1,4 @@
+$password = ConvertTo-SecureString "$POWERSHELL_PW" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential ("$POWERSHELL_USER", $password)
+$s = New-PSSession -ComputerName $SERVER_NAME -Authentication Negotiate -Credential $cred
+Invoke-Command -Session $s -ScriptBlock {Stop-Service ILLiadConnectionManager|out-null;Start-Service ILLiadConnectionManager|out-null;Stop-Service ILLiadOdysseyManager|out-null;Start-Service ILLiadOdysseyManager|out-null;Stop-Service ILLiadRapidManager|out-null;Start-Service ILLiadRapidManager|out-null;Stop-Service ILLiadSystemManager|out-null;Start-Service ILLiadSystemManager}
