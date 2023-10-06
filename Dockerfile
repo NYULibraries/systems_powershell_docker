@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/powershell:centos-7
 
 COPY illiad.iis.reset.ps1 .
 COPY illiad.services.reset.ps1 .
+COPY illiad.azcopy.ps1 .
 COPY docker-entrypoint.sh .
 
 ENTRYPOINT [ "./docker-entrypoint.sh" ]
