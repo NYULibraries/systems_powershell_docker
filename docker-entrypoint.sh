@@ -6,5 +6,8 @@ sed -i "s|\$POWERSHELL_PW|$POWERSHELL_PW|g" illiad.iis.reset.ps1
 sed -i "s|\$SERVER_NAME|$SERVER_NAME|g" illiad.services.reset.ps1  
 sed -i "s|\$POWERSHELL_USER|$POWERSHELL_USER|g" illiad.services.reset.ps1  
 sed -i "s|\$POWERSHELL_PW|$POWERSHELL_PW|g" illiad.services.reset.ps1  
+sed -i "s|\$SERVER_NAME|$SERVER_NAME|g" illiad.azcopy.ps1  
+sed -i "s|\$POWERSHELL_USER|$POWERSHELL_USER|g" illiad.azcopy.ps1  
+sed -i "s|\$POWERSHELL_PW|$POWERSHELL_PW|g" illiad.azcopy.ps1  
 
 exec "$@"
